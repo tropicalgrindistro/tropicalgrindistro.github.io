@@ -1,0 +1,913 @@
+/* ==================================================
+   CONFIGURAÇÃO GERAL
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #000;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* ==================================================
+   CABEÇALHO
+================================================== */
+
+header {
+    width: 100%;
+    background: #000;
+}
+
+
+/* REDES SOCIAIS */
+
+.top-bar {
+    width: 100%;
+    max-width: 1168px;
+    margin: 0 auto;
+
+    height: 50px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    padding: 8px 28px 0;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+
+.social-links a {
+    width: 30px !important;
+    height: 30px !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links img {
+    width: 30px !important;
+    height: 30px !important;
+    object-fit: contain;
+}
+
+
+/* LOGO + MENU */
+
+.main-header {
+    width: 100%;
+    max-width: 1168px;
+    margin: 0 auto;
+    height: 180px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 5px 55px 15px;
+}
+
+.logo img {
+    width: 155px;
+    height: auto;
+}
+.logo {
+    position: relative !important;
+    top: -20px !important;
+}
+
+.main-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.main-menu a {
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 30px;
+    padding: 15px 35px 13px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+}
+
+.main-menu a:hover {
+    background: #fff;
+    color: #000;
+}
+
+
+/* ==================================================
+   ÁREA PRINCIPAL
+================================================== */
+
+main {
+    width: 100%;
+}
+
+
+/* ==================================================
+   PRODUTO PRINCIPAL
+================================================== */
+
+.catalogo {
+    width: 100%;
+    background: #840c11;
+    overflow: hidden;
+}
+
+.produto {
+    min-height: 470px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    align-items: center;
+    padding: 25px 55px;
+}
+
+
+/* INFORMAÇÕES */
+
+.produto-informacoes {
+    text-align: left;
+    transform: translate(150px);
+}
+.produto-codigo {
+            transform: translate(-150px);
+        
+}
+
+.produto-informacoes h1 {
+    color: #fff;
+    font-size: 30px;
+    line-height: 1.25;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.produto-informacoes h1 span {
+    color: #d83a3a;
+}
+
+.produto-formato {
+    color: #fff;
+    margin-top: 18px;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+
+/* IMAGEM PRINCIPAL */
+
+.produto-imagem {
+    height: 280px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.produto-imagem > img {
+    max-height: 280px;
+    width: auto;
+    object-fit: contain;
+}
+
+
+/* CÓDIGO */
+
+.produto-codigo {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.produto-codigo p {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.produto-codigo span {
+    color: #d83a3a;
+}
+
+/* 1. Remove as margens padrão da página para colar nas bordas */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita barra de rolagem horizontal indesejada */
+}
+
+/* 2. Container principal ocupando 100% da largura da tela */
+.carrossel {
+    width: 100vw;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* 3. Faixa contendo os 6 slides (3 originais + 3 repetidos) */
+.carrossel-faixa {
+    width: 600vw; /* 6 slides x 100vw cada */
+    display: flex;
+    /* Animação suave com troca ágil e pausa total de 5 segundos */
+    animation: bannerTelaCheia 16.5s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+}
+
+/* 4. Cada banner individual ocupando exatamente a tela inteira */
+.slide {
+    width: 100vw; /* Ocupa 100% da largura da janela */
+    flex-shrink: 0;
+}
+
+/* 5. Estilização do produto/conteúdo para centralizar na tela */
+.produto {
+    width: 100%;
+    min-height: 450px; /* Ajuste a altura que desejar para o banner */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* --- ANIMAÇÃO (Pausa total por 5s e troca suave) --- */
+@keyframes bannerTelaCheia {
+    /* BANNER 1 — Parado na tela por 5s */
+    0%, 28% {
+        transform: translateX(0);
+    }
+
+    /* Troca para o Banner 2 */
+    33.333% {
+        transform: translateX(-100vw);
+    }
+
+    /* BANNER 2 — Parado na tela por 5s */
+    33.334%, 61.333% {
+        transform: translateX(-100vw);
+    }
+
+    /* Troca para o Banner 3 */
+    66.666% {
+        transform: translateX(-200vw);
+    }
+
+    /* BANNER 3 — Parado na tela por 5s */
+    66.667%, 94.666% {
+        transform: translateX(-200vw);
+    }
+
+    /* Troca para o 1º duplicado e reseta suavemente o ciclo */
+    100% {
+        transform: translateX(-300vw);
+    }
+}
+
+.slide {
+    width: 16.666666%;
+    flex-shrink: 0;
+}
+
+.slide-vermelho {
+    background: #840c11;
+}
+
+.slide-cinza {
+    background: #777;
+}
+
+.slide-verde {
+    background: #0db130;
+}
+
+@keyframes passarSlides {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+/* ==================================================
+   BANNER DE INFORMAÇÕES
+================================================== */
+
+.banner-informacoes {
+    width: 100%;
+    background: #fff;
+}
+
+.banner-informacoes img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* ==================================================
+   CATÁLOGO DE PRODUTOS
+================================================== */
+
+.produtos {
+    width: 100%;
+    background: #fff;
+    padding: 35px 80px 40px;
+}
+
+
+/* CADA CATEGORIA */
+
+.categoria-produtos {
+    width: 100%;
+    margin-bottom: 140px;
+}               
+
+
+/* ==================================================
+   CABEÇALHO DA CATEGORIA
+================================================== */
+
+.categoria-cabecalho {
+    width: 720px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: 0 auto 35px;
+}
+
+.categoria-cabecalho h2 {
+    min-width: 170px;
+    padding: 8px 30px 9px;
+    border: 3px solid #000;
+    border-radius: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+}
+
+.botao-ver-tudo {
+    position: absolute;
+    right: 0;
+    padding: 8px 25px 9px;
+    border: 3px solid #000;
+    border-radius: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1;
+    background: #fff;
+}
+
+
+/* ==================================================
+   GRID DOS PRODUTOS
+================================================== */
+
+.produtos-grid {
+    width: fit-content;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 180px);
+    justify-content: center;
+    gap: 50px;
+}
+
+
+/* ==================================================
+   CARD
+================================================== */
+
+.produto-card {
+    width: 180px;
+    background: #f1f1ef;
+    border-radius: 15px;
+    padding: 12px
+}
+
+.produto-card a {
+    display: block;
+}
+
+
+/* ÁREA DA IMAGEM */
+
+
+    
+    .produto-imagem-card {
+        width: 150px !important;
+        height: 150px !important;
+        aspect-ratio: auto !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 auto !important;
+        overflow: hidden;
+    }
+   
+.produto-imagem-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* LINHA */
+
+.linha-produto {
+    width: 100px !important;
+    height: 1px !important;
+    background: #000 !important;
+    margin: 12px auto 10px !important;
+}
+
+
+/* TEXTO */
+
+.produto-card h3 {
+    padding: 0 4px;
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: bold;
+    text-align: center;
+}
+
+.produto-card p {
+    margin-top: 3px;
+    font-size: 11px;
+    line-height: 1;
+    text-align: center;
+}
+
+
+/* ESPAÇOS VAZIOS */
+
+.produto-vazio .produto-imagem-card {
+    background: #f1f1ef;
+}
+
+
+/* ==================================================
+   QUEM É CLEO
+================================================== */
+
+.quem-e-cleo {
+    width: 100%;
+    min-height: 700px;
+    background: #000;
+    position: relative;
+}
+
+.cleo-conteudo {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 0 8px 0 60px;
+}
+
+.cleo-imagem {
+    width: auto;
+    height: 100%;
+}
+
+.cleo-imagem img {
+    width: auto;
+    height: 100%;
+    
+}
+
+.cleo-texto {
+    display: block;
+    color: #fff;
+    width: 45%;
+    order: -1;
+    margin-right: auto;
+    margin-left: 60px;
+    align-self: center;
+}
+.cleo-texto h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+
+/* ==================================================
+   RODAPÉ
+================================================== */
+
+footer {
+    width: 100%;
+    min-height: 320px;
+
+    background: #ffb45c;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    align-items: start;
+
+    padding: 55px 11% 45px;
+
+    column-gap: 70px;
+
+    color: #222;
+}
+
+
+/* ==================================================
+   COLUNAS DO RODAPÉ
+================================================== */
+
+.rodape-coluna {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+/* TÍTULOS */
+
+.rodape-coluna h2 {
+    margin: 0 0 20px;
+
+    font-size: 27px;
+
+    font-weight: bold;
+
+    line-height: 1;
+}
+
+
+/* TEXTOS */
+
+.rodape-coluna a,
+.rodape-coluna p {
+    margin: 0 0 6px;
+
+    color: #222;
+
+    font-size: 16px;
+
+    line-height: 1.15;
+}
+
+
+/* INSTAGRAM */
+
+.rodape-coluna a {
+    text-decoration: underline;
+}
+
+
+/* PIX */
+
+.rodape-coluna .pix {
+    width: 120px;
+
+    height: auto;
+
+    margin-top: 0;
+}
+
+/* ==================================================
+   RESPONSIVIDADE
+================================================== */
+
+@media (max-width: 700px) {
+
+    .top-bar {
+        padding-right: 25px;
+    }
+
+    .social-links {
+        gap: 42px;
+    }
+
+    .main-header {
+        padding: 0px 55px 30px;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    .main-menu {
+        gap: 8px;
+    }
+
+    .main-menu a {
+        padding: 6px 13px 7px;
+
+        font-size: 11px;
+    }
+
+
+    /* PRODUTO PRINCIPAL */
+
+    .produto {
+        grid-template-columns: 1fr 1.5fr 0.7fr;
+
+        padding: 20px 25px;
+
+        min-height: 180px;
+    }
+
+    .produto-imagem {
+        height: 130px;
+    }
+
+    .produto-imagem > img {
+        max-height: 130px;
+    }
+
+    .produto-informacoes h1 {
+        font-size: 30px;
+    }
+
+    .produto-formato {
+        font-size: 8px;
+    }
+
+    .produto-codigo p {
+        font-size: 30px;
+    }
+
+
+    /* PRODUTOS */
+
+    .produtos {
+        padding: 35px 35px 55px;
+    }
+
+    .categoria-cabecalho {
+        margin-bottom: 30px;
+    }
+
+    .categoria-cabecalho h2 {
+        min-width: 120px;
+
+        font-size: 13px;
+    }
+
+    .botao-ver-tudo {
+        right: 3%;
+
+        font-size: 11px;
+
+        padding: 5px 13px;
+    }
+
+    .produtos-grid {
+        gap: 20px;
+    }
+
+    .produto-card h3 {
+        font-size: 7px;
+    }
+
+    .produto-card p {
+        font-size: 7px;
+    }
+
+
+    /* CLEO */
+
+    .quem-e-cleo {
+        min-height: 250px;
+    }
+
+    .cleo-conteudo {
+        min-height: 250px;
+
+        padding-right: 0;
+    }
+
+    .cleo-imagem {
+        width: 42%;
+    }
+
+
+    /* RODAPÉ */
+
+    footer {
+        min-height: 145px;
+
+        padding: 22px 30px;
+
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+/* ==================================================
+   CELULAR PEQUENO
+================================================== */
+
+@media (max-width: 480px) {
+
+    .top-bar {
+        height: 30px;
+    }
+
+    .social-links {
+        gap: 28px;
+    }
+
+    .social-links a {
+        width: 30px;
+        height: 30px;
+    }
+
+    .main-header {
+        height: 75px;
+
+        padding: 5px 18px 12px;
+    }
+
+    .logo img {
+        width: 70px;
+    }
+
+    .main-menu {
+        gap: 5px;
+    }
+
+    .main-menu a {
+        padding: 5px 9px 6px;
+
+        border-width: 1.5px;
+
+        font-size: 9px;
+    }
+
+
+    /* PRODUTO */
+
+    .produto {
+        padding: 20px 18px;
+
+        grid-template-columns: 1fr 1.5fr 0.7fr;
+    }
+
+    .produto-informacoes h1 {
+        font-size: 30px !important;
+    }
+
+    .produto-formato {
+        font-size: 28px !important;
+        margin-top: 12px;
+    }
+
+    .produto-imagem {
+        height: 115px;
+    }
+
+    .produto-imagem > img {
+        max-height: 115px;
+    }
+
+    .produto-codigo p {
+        font-size: 30px !important;
+    }
+
+
+    /* CATÁLOGO */
+
+    .produtos {
+        padding: 30px 25px 50px;
+    }
+
+    .categoria-produtos {
+        width: 100%;
+        margin-bottom: 140px;
+        justify-content: center;
+    }
+
+    .categoria-cabecalho {
+        margin-bottom: 25px;
+    }
+
+    .categoria-cabecalho h2 {
+        min-width: 105px;
+
+        padding: 4px 15px;
+
+        border-width: 2px;
+
+        font-size: 11px;
+    }
+
+    .botao-ver-tudo {
+        right: 0;
+
+        padding: 4px 11px;
+
+        border-width: 2px;
+
+        font-size: 9px;
+    }
+
+    .produtos-grid {
+        gap: 15px;
+    }
+
+    .produto-imagem-card {
+        border-radius: 12px;
+
+        padding: 8px;
+    }
+
+    .produto-card h3 {
+        font-size: 6px;
+    }
+
+    .produto-card p {
+        font-size: 6px;
+    }
+
+
+    /* CLEO */
+
+    .quem-e-cleo {
+        min-height: 200px;
+    }
+
+    .cleo-conteudo {
+        min-height: 200px;
+    }
+
+    .cleo-imagem {
+        width: 48%;
+    }
+
+
+    /* RODAPÉ */
+
+    footer {
+        min-height: 125px;
+
+        padding: 20px;
+
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .footer-links a {
+        font-size: 7px;
+    }
+
+    .footer-social a {
+        width: 40px;
+    }
+}
+
+/* CORES DAS PALAVRAS DOS PRODUTOS */
+
+.slide-cinza .produto-informacoes h1 span {
+    color: #000000 !important;
+}
+
+.slide-verde .produto-informacoes h1 span {
+    color: #0b4d25 !important;
+}
+
+/* CORES DOS NÚMEROS */
+
+.slide-cinza .produto-codigo span {
+    color: #000000 !important;
+}
+
+.slide-verde .produto-codigo span {
+    color: #0b4d25 !important;
+}
