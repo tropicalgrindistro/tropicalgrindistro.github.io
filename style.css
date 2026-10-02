@@ -911,3 +911,36 @@ footer {
 .slide-verde .produto-codigo span {
     color: #0b4d25 !important;
 }
+
+/* ====================================================
+   REGRAS EXCLUSIVAS PARA TELEMÓVEL (NÃO AFETAM O PC)
+   ==================================================== */
+@media (max-width: 768px) {
+
+  /* Reduz os títulos e botões gigantes só no telemóvel */
+  .categoria-cabecalho h2,
+  .botao-ver-tudo {
+    font-size: 18px !important;
+    padding: 6px 12px !important;
+  }
+
+  /* Solta o botão "Ver Tudo" para não atropelar o título no telemóvel */
+  .botao-ver-tudo {
+    position: static !important;
+    margin-top: 10px;
+  }
+
+  /* Garante que o banner do "Karne Krua" empilhe o texto e a capa */
+  .banner, 
+  .hero-banner,
+  .categoria-cabecalho {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  /* Impede que qualquer imagem do site transborde o ecrã */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
