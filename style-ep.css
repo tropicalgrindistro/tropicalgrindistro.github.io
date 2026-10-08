@@ -178,5 +178,17 @@ main {
     .catalogo-lp {
         gap: 20px;
     }
+    
+/* Remove o azul, o sublinhado e garante que o link ocupe todo o card */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+}
 
+/* Garante que o card mantém a altura normal e não estica para baixo */
+.lp-card {
+    height: auto !important;
+}
 }
