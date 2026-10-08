@@ -179,16 +179,24 @@ main {
         gap: 20px;
     }
     
-/* Remove o azul, o sublinhado e garante que o link ocupe todo o card */
-.card-link {
-    text-decoration: none;
-    color: inherit;
+/* Remove o azul, o sublinhado e garante a cor preta em todo o card e textos */
+.card-link,
+.card-link:visited,
+.card-link:hover,
+.card-link:active {
+    text-decoration: none !important;
+    color: inherit !important;
     display: block;
     width: 100%;
+}
+
+.card-link h3,
+.card-link p {
+    color: #000 !important;
+    text-decoration: none !important;
 }
 
 /* Garante que o card mantém a altura normal e não estica para baixo */
 .lp-card {
     height: auto !important;
-}
 }
