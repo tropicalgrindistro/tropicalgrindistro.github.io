@@ -80,14 +80,14 @@ text-align: center;
 /* CATÁLOGO */
 
 .catalogo-lp {
-width: 100%;
-max-width: 1200px;
-margin: 0 auto;
-display: grid;
-grid-template-columns: repeat(5, minmax(0, 1fr));
-gap: 30px;
-justify-items: center;
-align-items: start;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 150px);
+    justify-content: center;
+    align-items: start;
+    gap: 30px;
 }
 
 .lp-card {
