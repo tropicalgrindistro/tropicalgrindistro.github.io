@@ -1,202 +1,207 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
 
 html {
-    scroll-behavior: smooth;
+scroll-behavior: smooth;
 }
 
 body {
-    background: #fff;
-    color: #000;
-    font-family: Arial, Helvetica, sans-serif;
+background: #fff;
+color: #000;
+font-family: Arial, Helvetica, sans-serif;
 }
 
-
-/* =========================
-   TOPO
-========================= */
+/* TOPO */
 
 .topo {
-    width: 100%;
-    height: 230px;
-    background: #000;
-    position: relative;
+width: 100%;
+height: 230px;
+background: #000;
+position: relative;
 }
 
 .logo {
-    position: absolute;
-    left: 60px;
-    bottom: 35px;
+position: absolute;
+left: 60px;
+bottom: 35px;
 }
 
 .logo img {
-    width: 155px;
-    height: auto;
+width: 155px;
+height: auto;
 }
 
 .redes {
-    position: absolute;
-    top: 25px;
-    right: 60px;
-    display: flex;
-    align-items: center;
-    gap: 35px;
+position: absolute;
+top: 25px;
+right: 60px;
+display: flex;
+align-items: center;
+gap: 35px;
 }
 
 .redes a {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+width: 30px;
+height: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 .redes img {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
+width: 30px;
+height: 30px;
+object-fit: contain;
 }
 
-
-/* =========================
-   TÍTULO
-========================= */
+/* TÍTULO */
 
 main {
-    width: 100%;
-    padding: 55px 60px 80px;
+width: 100%;
+padding: 55px 60px 80px;
 }
 
 .titulo-categoria {
-    width: fit-content;
-    margin: 0 auto 50px;
-    padding: 8px 30px 9px;
-
-    border: 3px solid #000;
-    border-radius: 30px;
-
-    font-size: 30px;
-    font-weight: bold;
-    line-height: 1;
-    text-align: center;
+width: fit-content;
+max-width: 100%;
+margin: 0 auto 50px;
+padding: 8px 30px 9px;
+border: 3px solid #000;
+border-radius: 30px;
+font-size: 30px;
+font-weight: bold;
+line-height: 1.2;
+text-align: center;
 }
 
-/* =========================
-   CATÁLOGO
-========================= */
+/* CATÁLOGO */
 
 .catalogo-lp {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+display: grid;
+grid-template-columns: repeat(5, minmax(0, 1fr));
+gap: 30px;
+justify-items: center;
+align-items: start;
 }
 
 .lp-card {
-    width: 150px;
-    background: #f1f1ef;
-    border-radius: 15px;
-    padding: 12px;
-    height: auto;
+width: 150px;
+max-width: 100%;
+height: auto;
+background: #f1f1ef;
+border-radius: 15px;
+padding: 12px;
 }
 
 .lp-imagem {
-    width: 126px;
-    height: 126px;
-    background: #dcdcdc;
-    margin: 0 auto;
-    border-radius: 8px;
-    overflow: hidden;
+width: 126px;
+height: 126px;
+max-width: 100%;
+background: #dcdcdc;
+margin: 0 auto;
+border-radius: 8px;
+overflow: hidden;
 }
 
 .lp-imagem img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+width: 100%;
+height: 100%;
+object-fit: cover;
 }
 
-/* linha separadora */
+/* LINHA SEPARADORA */
 
 .linha-produto {
-    width: 100px;
-    height: 1px;
-    background: #000;
-    margin: 12px auto 10px;
+width: 100px;
+max-width: 100%;
+height: 1px;
+background: #000;
+margin: 12px auto 10px;
 }
 
-
-/* texto */
+/* TEXTOS */
 
 .lp-texto h3 {
-    font-size: 13px;
-    line-height: 1.2;
-    font-weight: bold;
-    text-align: center;
+font-size: 13px;
+line-height: 1.2;
+font-weight: bold;
+text-align: center;
 }
 
 .lp-texto p {
-    margin-top: 3px;
-    font-size: 11px;
-    text-align: center;
+margin-top: 3px;
+font-size: 11px;
+text-align: center;
 }
 
+/* LINKS DOS PRODUTOS */
 
-/* =========================
-   RESPONSIVO
-========================= */
-
-@media (max-width: 700px) {
-
-    .topo {
-        height: 180px;
-    }
-
-    .logo {
-        left: 30px;
-        bottom: 25px;
-    }
-
-    .logo img {
-        width: 100px;
-    }
-
-    .redes {
-        right: 30px;
-        gap: 20px;
-    }
-
-    main {
-        padding: 40px 25px 60px;
-    }
-
-    .catalogo-lp {
-        gap: 20px;
-    }
-    
-/* Remove o azul, o sublinhado e garante a cor preta em todo o card e textos */
 .card-link,
 .card-link:visited,
 .card-link:hover,
 .card-link:active {
-    text-decoration: none !important;
-    color: inherit !important;
-    display: block;
-    width: 100%;
+display: block;
+width: 100%;
+color: inherit;
+text-decoration: none;
 }
 
 .card-link h3,
 .card-link p {
-    color: #000 !important;
-    text-decoration: none !important;
+color: #000;
+text-decoration: none;
 }
 
-/* Garante que o card mantém a altura normal e não estica para baixo */
+/* RESPONSIVO PARA CELULAR */
+
+@media (max-width: 700px) {
+
+.topo {
+    height: 180px;
+}
+
+.logo {
+    left: 30px;
+    bottom: 25px;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.redes {
+    right: 30px;
+    gap: 20px;
+}
+
+main {
+    padding: 40px 15px 60px;
+}
+
+.titulo-categoria {
+    font-size: 20px;
+    padding: 8px 15px;
+    margin-bottom: 35px;
+}
+
+.catalogo-lp {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
 .lp-card {
-    height: auto !important;
+    width: 140px;
+}
+
+.lp-imagem {
+    width: 116px;
+    height: 116px;
+}
+
 }
