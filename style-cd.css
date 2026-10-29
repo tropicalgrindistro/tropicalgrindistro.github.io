@@ -14,7 +14,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
 /* =========================
    TOPO
 ========================= */
@@ -60,178 +59,62 @@ body {
     object-fit: contain;
 }
 
-
 /* =========================
    TÍTULO
 ========================= */
 
 main {
     width: 100%;
-    padding: 55px 60px 80px;
+    padding: 55px 30px 80px;
 }
 
 .titulo-categoria {
     width: fit-content;
-    margin: 0 auto 50px;
+    max-width: 100%;
+    margin: 0 auto 45px;
     padding: 8px 30px 9px;
-
     border: 3px solid #000;
     border-radius: 30px;
-
     font-size: 30px;
     font-weight: bold;
-    line-height: 1;
-    text-align: center;
-}
-
-/* =========================
-   CATÁLOGO
-========================= */
-
-.catalogo-lp {
-    width: fit-content;
-    margin: 0 auto;
-
-    display: grid;
-    grid-template-columns: repeat(6, 150px);
-    gap: 45px;
-}
-
-
-/* =========================
-   CARD
-========================= */
-
-.lp-card {
-    width: 150px;
-    background: #f1f1ef;
-    border-radius: 15px;
-    padding: 12px;
-}
-
-
-/* espaço da imagem */
-
-.lp-imagem {
-    width: 126px;
-    height: 126px;
-    background: #dcdcdc;
-    margin: 0 auto;
-}
-
-
-/* linha separadora */
-
-.linha-produto {
-    width: 100px;
-    height: 1px;
-    background: #000;
-    margin: 12px auto 10px;
-}
-
-
-/* texto */
-
-.lp-texto h3 {
-    font-size: 13px;
     line-height: 1.2;
-    font-weight: bold;
     text-align: center;
 }
-
-.lp-texto p {
-    margin-top: 3px;
-    font-size: 11px;
-    text-align: center;
-}
-
 
 /* =========================
-   RESPONSIVO
+   CATÁLOGO DE CDs
 ========================= */
-
-@media (max-width: 1100px) {
-
-    .catalogo-lp {
-        grid-template-columns: repeat(4, 150px);
-    }
-
-}
-
-
-@media (max-width: 700px) {
-
-    .topo {
-        height: 180px;
-    }
-
-    .logo {
-        left: 30px;
-        bottom: 25px;
-    }
-
-    .logo img {
-        width: 100px;
-    }
-
-    .redes {
-        right: 30px;
-        gap: 20px;
-    }
-
-    main {
-        padding: 40px 25px 60px;
-    }
-
-    .catalogo-lp {
-        grid-template-columns: repeat(3, 150px);
-        gap: 25px;
-    }
-
-}
-
-
-@media (max-width: 520px) {
-
-    .catalogo-lp {
-        grid-template-columns: repeat(2, 150px);
-        gap: 20px;
-    }
-
-}
-
-
-@media (max-width: 360px) {
-
-    .catalogo-lp {
-        grid-template-columns: 150px;
-    }
-
-}
-
-/* ORGANIZAÇÃO DA PÁGINA DE CDs */
 
 .catalogo-lp {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 24px;
+    width: 100%;
     max-width: 1000px;
-    width: 90%;
-    margin: 30px auto;
+    margin: 0 auto;
     align-items: start;
 }
+
+/* =========================
+   CARDS
+========================= */
 
 .catalogo-lp .lp-card {
     width: 100%;
     min-width: 0;
+    padding: 10px;
     margin: 0;
-    box-sizing: border-box;
+    background: #f1f1ef;
+    border-radius: 12px;
     overflow: hidden;
 }
+
+/* CAPAS DOS CDs */
 
 .catalogo-lp .lp-imagem {
     width: 100%;
     aspect-ratio: 1 / 1;
+    background: #dcdcdc;
     overflow: hidden;
 }
 
@@ -239,13 +122,19 @@ main {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
+
+/* LINHA SEPARADORA */
 
 .catalogo-lp .linha-produto {
     width: 80%;
-    margin: 8px auto;
+    height: 1px;
+    background: #000;
+    margin: 10px auto 8px;
 }
+
+/* NOMES E ÁLBUNS */
 
 .catalogo-lp .lp-texto {
     width: 100%;
@@ -254,30 +143,104 @@ main {
 }
 
 .catalogo-lp .lp-texto h3 {
-    font-size: 13px;
-    margin: 5px 0;
-}
-
-.catalogo-lp .lp-texto p {
-    font-size: 11px;
+    font-size: 12px;
+    line-height: 1.3;
+    font-weight: bold;
     margin: 4px 0;
 }
 
-/* TABLETS */
+.catalogo-lp .lp-texto p {
+    font-size: 10px;
+    line-height: 1.3;
+    margin: 4px 0;
+}
 
-@media (max-width: 800px) {
+/* =========================
+   TELAS MÉDIAS
+========================= */
+
+@media (max-width: 1000px) {
     .catalogo-lp {
         grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 16px;
+        gap: 20px;
+    }
+
+    main {
+        padding-left: 25px;
+        padding-right: 25px;
     }
 }
 
-/* CELULARES */
+/* =========================
+   TABLETS E CELULARES
+========================= */
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
+    .topo {
+        height: 180px;
+    }
+
+    .logo {
+        left: 25px;
+        bottom: 25px;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    .redes {
+        top: 20px;
+        right: 25px;
+        gap: 18px;
+    }
+
+    .redes a,
+    .redes img {
+        width: 25px;
+        height: 25px;
+    }
+
+    main {
+        padding: 35px 16px 50px;
+    }
+
+    .titulo-categoria {
+        font-size: 23px;
+        padding: 7px 20px;
+        margin-bottom: 30px;
+    }
+
     .catalogo-lp {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 14px;
-        width: 92%;
+        gap: 16px;
+    }
+
+    .catalogo-lp .lp-card {
+        padding: 8px;
+    }
+
+    .catalogo-lp .lp-texto h3 {
+        font-size: 12px;
+    }
+
+    .catalogo-lp .lp-texto p {
+        font-size: 10px;
+    }
+}
+
+/* CELULARES PEQUENOS */
+
+@media (max-width: 360px) {
+    .catalogo-lp {
+        gap: 10px;
+    }
+
+    .catalogo-lp .lp-card {
+        padding: 6px;
+    }
+
+    .titulo-categoria {
+        font-size: 20px;
     }
 }
