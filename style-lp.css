@@ -14,10 +14,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
-/* =========================
-   TOPO
-========================= */
+/* TOPO */
 
 .topo {
     width: 100%;
@@ -60,10 +57,7 @@ body {
     object-fit: contain;
 }
 
-
-/* =========================
-   TÍTULO
-========================= */
+/* TÍTULO */
 
 main {
     width: 100%;
@@ -72,65 +66,69 @@ main {
 
 .titulo-categoria {
     width: fit-content;
+    max-width: 100%;
     margin: 0 auto 50px;
     padding: 8px 30px 9px;
-
     border: 3px solid #000;
     border-radius: 30px;
-
     font-size: 30px;
     font-weight: bold;
-    line-height: 1;
+    line-height: 1.2;
     text-align: center;
 }
 
-/* =========================
-   CATÁLOGO
-========================= */
+/* CATÁLOGO */
 
 .catalogo-lp {
-    width: fit-content;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-
     display: grid;
-    grid-template-columns: repeat(6, 150px);
-    gap: 45px;
+    grid-template-columns: repeat(5, 150px);
+    justify-content: center;
+    align-items: start;
+    gap: 30px;
 }
 
-
-/* =========================
-   CARD
-========================= */
+/* CARDS */
 
 .lp-card {
     width: 150px;
+    max-width: 100%;
+    height: auto;
     background: #f1f1ef;
     border-radius: 15px;
     padding: 12px;
 }
 
-
-/* espaço da imagem */
-
 .lp-imagem {
     width: 126px;
     height: 126px;
+    max-width: 100%;
     background: #dcdcdc;
     margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
+.lp-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 
-/* linha separadora */
+/* LINHA SEPARADORA */
 
 .linha-produto {
     width: 100px;
+    max-width: 100%;
     height: 1px;
     background: #000;
     margin: 12px auto 10px;
 }
 
-
-/* texto */
+/* TEXTOS */
 
 .lp-texto h3 {
     font-size: 13px;
@@ -145,70 +143,25 @@ main {
     text-align: center;
 }
 
-/* =========================
-   LINK DOS CARDS
-========================= */
+/* LINKS DOS PRODUTOS */
 
-.card-link {
-    display: block;
-    width: 100%;
-    color: #000;
-    text-decoration: none;
-}
-
+.card-link,
 .card-link:visited,
 .card-link:hover,
 .card-link:active {
-    color: #000;
-    text-decoration: none;
-}
-
-/* =========================
-   IMAGENS DOS LPs
-========================= */
-
-.lp-imagem {
-    width: 126px;
-    height: 126px;
-    background: #dcdcdc;
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.lp-imagem img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     display: block;
+    width: 100%;
+    color: inherit;
+    text-decoration: none;
 }
 
-/* =========================
-   TEXTO DOS CARDS
-========================= */
-
-.lp-texto {
-    color: #000;
-    text-align: center;
-}
-
-.lp-texto h3,
-.lp-texto p {
+.card-link h3,
+.card-link p {
     color: #000;
     text-decoration: none;
 }
-/* =========================
-   RESPONSIVO
-========================= */
 
-@media (max-width: 1100px) {
-
-    .catalogo-lp {
-        grid-template-columns: repeat(4, 150px);
-    }
-
-}
-
+/* RESPONSIVO */
 
 @media (max-width: 700px) {
 
@@ -231,31 +184,26 @@ main {
     }
 
     main {
-        padding: 40px 25px 60px;
+        padding: 40px 15px 60px;
+    }
+
+    .titulo-categoria {
+        font-size: 20px;
+        padding: 8px 15px;
+        margin-bottom: 35px;
     }
 
     .catalogo-lp {
-        grid-template-columns: repeat(3, 150px);
-        gap: 25px;
-    }
-
-}
-
-
-@media (max-width: 520px) {
-
-    .catalogo-lp {
-        grid-template-columns: repeat(2, 150px);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 20px;
     }
 
-}
-
-
-@media (max-width: 360px) {
-
-    .catalogo-lp {
-        grid-template-columns: 150px;
+    .lp-card {
+        width: 140px;
     }
 
+    .lp-imagem {
+        width: 116px;
+        height: 116px;
+    }
 }
