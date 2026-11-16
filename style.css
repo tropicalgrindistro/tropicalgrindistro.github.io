@@ -1364,4 +1364,116 @@ footer {
     .produto-card p {
         font-size: 8px !important;
     }
+
+   /* JANELA COMO COMPRAR */
+
+.modal-compra {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+    padding: 20px;
+}
+
+/* ESCONDER JANELA */
+
+.modal-compra[hidden] {
+    display: none;
+}
+
+/* CONTEÚDO DA JANELA */
+
+.modal-conteudo {
+    background: #1a1a1a;
+    color: #e0e0e0;
+
+    width: 100%;
+    max-width: 600px;
+
+    padding: 40px;
+    border: 1px solid #777;
+    border-radius: 8px;
+
+    position: relative;
+}
+
+/* BOTÃO X */
+
+.fechar-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+
+    background: none;
+    border: none;
+
+    color: #ccc;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* TÍTULO */
+
+.modal-conteudo h2 {
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #666;
+    padding-bottom: 20px;
+}
+
+/* PASSOS */
+
+.passos-compra {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.passo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.passo span {
+    font-size: 25px;
+    color: #999;
+}
+
+.passo p {
+    font-size: 15px;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .modal-conteudo {
+        padding: 30px 20px;
+    }
+
+    .modal-conteudo h2 {
+        font-size: 20px;
+    }
+
+    .passo {
+        gap: 12px;
+    }
+
+    .passo span {
+        font-size: 20px;
+    }
+
+    .passo p {
+        font-size: 13px;
+    }
+
 }
