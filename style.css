@@ -1499,3 +1499,91 @@ footer {
     max-width: 600px !important;
     padding: 40px !important;
 }
+
+/* JANELA COMO COMPRAR */
+
+.modal-compra[hidden] {
+    display: none !important;
+}
+
+.modal-compra:not([hidden]) {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 99999;
+    padding: 20px;
+}
+
+/* CONTEÚDO */
+
+.modal-conteudo {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    padding: 40px;
+    background: #1a1a1a;
+    color: #fff;
+    border: 1px solid #777;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* BOTÃO FECHAR */
+
+.fechar-modal {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* TÍTULO */
+
+.modal-conteudo h2 {
+    font-size: 25px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #666;
+}
+
+/* PASSOS */
+
+.passos-compra {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.passo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.passo span {
+    font-size: 25px;
+    color: #999;
+}
+
+.passo p {
+    font-size: 15px;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    .modal-conteudo {
+        padding: 30px 20px;
+    }
+
+    .passo {
+        gap: 12px;
+    }
+}
