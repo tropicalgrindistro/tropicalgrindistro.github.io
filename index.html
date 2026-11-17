@@ -873,31 +873,5 @@
 </footer>
 <script src="script.js"></script>
 
-    <script>
-const abrirCompra = document.getElementById("abrir-como-comprar");
-const fecharCompra = document.getElementById("fechar-modal");
-const modalCompra = document.getElementById("modal-compra");
-
-abrirCompra.addEventListener("click", function(event) {
-    event.preventDefault();
-    modalCompra.hidden = false;
-});
-
-fecharCompra.addEventListener("click", function() {
-    modalCompra.hidden = true;
-});
-
-modalCompra.addEventListener("click", function(event) {
-    if (event.target === modalCompra) {
-        modalCompra.hidden = true;
-    }
-});
-
-document.addEventListener("keydown", function(event) {
-    if (event.key === "Escape") {
-        modalCompra.hidden = true;
-    }
-});
-</script>
 </body>
 </html>
