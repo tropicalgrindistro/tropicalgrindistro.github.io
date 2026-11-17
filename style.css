@@ -1476,4 +1476,27 @@ footer {
         font-size: 13px;
     }
 
+   /* TESTE DE VISIBILIDADE DO MODAL */
+
+.modal-compra:not([hidden]) {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: 99999 !important;
+}
+
+.modal-conteudo {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 100000 !important;
+    background: #1a1a1a !important;
+    color: #ffffff !important;
+    width: 90% !important;
+    max-width: 600px !important;
+    padding: 40px !important;
+}
 }
