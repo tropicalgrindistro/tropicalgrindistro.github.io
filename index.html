@@ -871,7 +871,37 @@
     </div>
 
 </footer>
-<script src="script.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    const abrirModal = document.getElementById("abrir-como-comprar");
+    const fecharModal = document.getElementById("fechar-modal");
+    const modal = document.getElementById("modal-compra");
+
+    abrirModal.addEventListener("click", function(event) {
+        event.preventDefault();
+        modal.hidden = false;
+    });
+
+    fecharModal.addEventListener("click", function() {
+        modal.hidden = true;
+    });
+
+    modal.addEventListener("click", function(event) {
+        if (event.target === modal) {
+            modal.hidden = true;
+        }
+    });
+
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
+            modal.hidden = true;
+        }
+    });
+
+});
+</script>
 
 </body>
 </html>
